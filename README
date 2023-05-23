@@ -1,0 +1,39 @@
+# FRC Shirt Shooter Robot
+
+!LAST UPDATED: 2023-05-23!
+
+## Misc
+
+This README explains in dept how the project is setup for the shirt shooter. The code is
+fully in C++ and its primary source file is located under "Robot\src\main\cpp\Robot.cpp".
+
+In this file is stored the "Robot" class which inherits important methods which are called
+when starting different modes (TeleOp, auto etc). Only Teleop was setup. 
+
+The mechanum controller is setup under a custom class which is initialized by passing the 
+CAN talon motor ids in the following order: (0: top_left, 1: bottom_left,  2: top_right, 
+3: bottom_right). 
+
+## Useful information about configuration:
+- Name: roboRIO-4947-FRC.local.
+- Team number: 4947
+- Base motors: 
+    - Type: TalonSRX
+    - Mode: CAN
+    - (Can be updated & managed using the "Phoenix Tuner X" app)
+- Shooter motor:
+    - Type: Sparkmax
+    - Mode: CAN
+    - (Can be updated & managed using the rev client app in admin while usb-c cable is connected to the motor)
+- Controller setup:
+    - Left joystick: 
+        + (When up or down move forward or backward)
+        + (When left or right move to left or right)
+    - Right joystick:
+        + (When left pr right rotate left or right)
+    - DPad:
+        + (When down or up rotate shooter up or down)
+    - Horns
+        + (Not done yet)
+    - Compressors
+        + (Not done yet)
